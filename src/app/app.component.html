@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Name: {{ data.name }}!
+  </h1>
+  <img width="300" alt="Hat" [src]="data.image">
+</div>
+<h2>Description: </h2>
+<p>{{data.description}}</p>
+<section>
+  <h3>Price:</h3>
+  <span>{{data.price.amount}}</span>
+  <span>{{data.price.currency}}</span>
+</section>
+
+  <h3>Brand {{data.brand}}</h3>
+  <h3>SKU {{data.sku}}</h3>
+<ul>
+  <li *ngFor="let prop of data.properties">
+    <h4>{{prop.name}}:{{prop.value}}</h4>
+  </li>
+</ul>
+
